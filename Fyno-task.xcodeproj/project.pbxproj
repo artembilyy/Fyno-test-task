@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDC631FE2C183E3D00316639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC631FD2C183E3D00316639 /* AppDelegate.swift */; };
+		EDC632002C183E3D00316639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC631FF2C183E3D00316639 /* SceneDelegate.swift */; };
+		EDC632022C183E3D00316639 /* MainFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632012C183E3D00316639 /* MainFeatureViewController.swift */; };
+		EDC632072C183E3F00316639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC632062C183E3F00316639 /* Assets.xcassets */; };
+		EDC6320A2C183E3F00316639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC632082C183E3F00316639 /* LaunchScreen.storyboard */; };
+		EDC632192C186FA800316639 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632182C186FA800316639 /* CountryModel.swift */; };
+		EDC6321B2C18C12100316639 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6321A2C18C12100316639 /* BottomSheetViewController.swift */; };
+		EDC632762C18E5DD00316639 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632682C18E5DD00316639 /* UIViewController+Extension.swift */; };
+		EDC632772C18E5DD00316639 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326A2C18E5DD00316639 /* StatisticView.swift */; };
+		EDC632782C18E5DD00316639 /* VerticalDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326B2C18E5DD00316639 /* VerticalDividerView.swift */; };
+		EDC632792C18E5DD00316639 /* StatisticsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326C2C18E5DD00316639 /* StatisticsSectionView.swift */; };
+		EDC6327A2C18E5DD00316639 /* TopSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326D2C18E5DD00316639 /* TopSectionView.swift */; };
+		EDC6327B2C18E5DD00316639 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326E2C18E5DD00316639 /* FooterView.swift */; };
+		EDC6327C2C18E5DD00316639 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6326F2C18E5DD00316639 /* CustomAnnotationView.swift */; };
+		EDC6327D2C18E5DD00316639 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632702C18E5DD00316639 /* SeparatorView.swift */; };
+		EDC6327E2C18E5DD00316639 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632712C18E5DD00316639 /* HeaderView.swift */; };
+		EDC6327F2C18E5DD00316639 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632722C18E5DD00316639 /* AddButton.swift */; };
+		EDC632802C18E5DD00316639 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632732C18E5DD00316639 /* CountryCell.swift */; };
+		EDC632812C18E5DD00316639 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632742C18E5DD00316639 /* CircleImageView.swift */; };
+		EDC632822C18E5DD00316639 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632752C18E5DD00316639 /* UIStackView+Extension.swift */; };
+		EDC632852C18E6B700316639 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632842C18E6B700316639 /* UICollectionView+Register.swift */; };
+		EDC632872C18EE6D00316639 /* BottomSheetViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632862C18EE6D00316639 /* BottomSheetViewController+DataSource.swift */; };
+		EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */; };
+		EDC6328B2C18F62500316639 /* UISheetPresentationController+Detent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */; };
+		EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDC631FA2C183E3D00316639 /* Fyno-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fyno-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC631FD2C183E3D00316639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDC631FF2C183E3D00316639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EDC632012C183E3D00316639 /* MainFeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureViewController.swift; sourceTree = "<group>"; };
+		EDC632062C183E3F00316639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDC632092C183E3F00316639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDC6320B2C183E3F00316639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC632182C186FA800316639 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		EDC6321A2C18C12100316639 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		EDC632682C18E5DD00316639 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EDC6326A2C18E5DD00316639 /* StatisticView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		EDC6326B2C18E5DD00316639 /* VerticalDividerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalDividerView.swift; sourceTree = "<group>"; };
+		EDC6326C2C18E5DD00316639 /* StatisticsSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsSectionView.swift; sourceTree = "<group>"; };
+		EDC6326D2C18E5DD00316639 /* TopSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSectionView.swift; sourceTree = "<group>"; };
+		EDC6326E2C18E5DD00316639 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		EDC6326F2C18E5DD00316639 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		EDC632702C18E5DD00316639 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		EDC632712C18E5DD00316639 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EDC632722C18E5DD00316639 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		EDC632732C18E5DD00316639 /* CountryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		EDC632742C18E5DD00316639 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		EDC632752C18E5DD00316639 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		EDC632842C18E6B700316639 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		EDC632862C18EE6D00316639 /* BottomSheetViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+DataSource.swift"; sourceTree = "<group>"; };
+		EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+FlowLayout.swift"; sourceTree = "<group>"; };
+		EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISheetPresentationController+Detent.swift"; sourceTree = "<group>"; };
+		EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainFeatureViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDC631F72C183E3D00316639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDC631F12C183E3D00316639 = {
+			isa = PBXGroup;
+			children = (
+				EDC631FC2C183E3D00316639 /* Fyno-task */,
+				EDC631FB2C183E3D00316639 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDC631FB2C183E3D00316639 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDC631FA2C183E3D00316639 /* Fyno-task.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDC631FC2C183E3D00316639 /* Fyno-task */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632832C18E61500316639 /* Application */,
+				EDC632672C18E5DD00316639 /* FynoUI */,
+				EDC632122C186F2300316639 /* MainFeature */,
+				EDC632062C183E3F00316639 /* Assets.xcassets */,
+				EDC632082C183E3F00316639 /* LaunchScreen.storyboard */,
+				EDC6320B2C183E3F00316639 /* Info.plist */,
+			);
+			path = "Fyno-task";
+			sourceTree = "<group>";
+		};
+		EDC632122C186F2300316639 /* MainFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632172C186F9E00316639 /* Model */,
+				EDC632132C186F3400316639 /* View */,
+			);
+			path = MainFeature;
+			sourceTree = "<group>";
+		};
+		EDC632132C186F3400316639 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDC6321A2C18C12100316639 /* BottomSheetViewController.swift */,
+				EDC632862C18EE6D00316639 /* BottomSheetViewController+DataSource.swift */,
+				EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */,
+				EDC632012C183E3D00316639 /* MainFeatureViewController.swift */,
+				EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDC632172C186F9E00316639 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632182C186FA800316639 /* CountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EDC632672C18E5DD00316639 /* FynoUI */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632692C18E5DD00316639 /* Elements */,
+				EDC632752C18E5DD00316639 /* UIStackView+Extension.swift */,
+				EDC632682C18E5DD00316639 /* UIViewController+Extension.swift */,
+				EDC632842C18E6B700316639 /* UICollectionView+Register.swift */,
+				EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */,
+			);
+			path = FynoUI;
+			sourceTree = "<group>";
+		};
+		EDC632692C18E5DD00316639 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632722C18E5DD00316639 /* AddButton.swift */,
+				EDC632742C18E5DD00316639 /* CircleImageView.swift */,
+				EDC632732C18E5DD00316639 /* CountryCell.swift */,
+				EDC6326F2C18E5DD00316639 /* CustomAnnotationView.swift */,
+				EDC6326E2C18E5DD00316639 /* FooterView.swift */,
+				EDC632712C18E5DD00316639 /* HeaderView.swift */,
+				EDC632702C18E5DD00316639 /* SeparatorView.swift */,
+				EDC6326C2C18E5DD00316639 /* StatisticsSectionView.swift */,
+				EDC6326A2C18E5DD00316639 /* StatisticView.swift */,
+				EDC6326D2C18E5DD00316639 /* TopSectionView.swift */,
+				EDC6326B2C18E5DD00316639 /* VerticalDividerView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		EDC632832C18E61500316639 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EDC631FD2C183E3D00316639 /* AppDelegate.swift */,
+				EDC631FF2C183E3D00316639 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDC631F92C183E3D00316639 /* Fyno-task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDC6320E2C183E3F00316639 /* Build configuration list for PBXNativeTarget "Fyno-task" */;
+			buildPhases = (
+				EDC631F62C183E3D00316639 /* Sources */,
+				EDC631F72C183E3D00316639 /* Frameworks */,
+				EDC631F82C183E3D00316639 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fyno-task";
+			packageProductDependencies = (
+			);
+			productName = "Fyno-task";
+			productReference = EDC631FA2C183E3D00316639 /* Fyno-task.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDC631F22C183E3D00316639 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EDC631F92C183E3D00316639 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = EDC631F52C183E3D00316639 /* Build configuration list for PBXProject "Fyno-task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDC631F12C183E3D00316639;
+			packageReferences = (
+			);
+			productRefGroup = EDC631FB2C183E3D00316639 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDC631F92C183E3D00316639 /* Fyno-task */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDC631F82C183E3D00316639 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC6320A2C183E3F00316639 /* LaunchScreen.storyboard in Resources */,
+				EDC632072C183E3F00316639 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDC631F62C183E3D00316639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC632802C18E5DD00316639 /* CountryCell.swift in Sources */,
+				EDC6327A2C18E5DD00316639 /* TopSectionView.swift in Sources */,
+				EDC6327B2C18E5DD00316639 /* FooterView.swift in Sources */,
+				EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */,
+				EDC6327C2C18E5DD00316639 /* CustomAnnotationView.swift in Sources */,
+				EDC632022C183E3D00316639 /* MainFeatureViewController.swift in Sources */,
+				EDC632792C18E5DD00316639 /* StatisticsSectionView.swift in Sources */,
+				EDC6327F2C18E5DD00316639 /* AddButton.swift in Sources */,
+				EDC632852C18E6B700316639 /* UICollectionView+Register.swift in Sources */,
+				EDC632822C18E5DD00316639 /* UIStackView+Extension.swift in Sources */,
+				EDC632772C18E5DD00316639 /* StatisticView.swift in Sources */,
+				EDC632782C18E5DD00316639 /* VerticalDividerView.swift in Sources */,
+				EDC6321B2C18C12100316639 /* BottomSheetViewController.swift in Sources */,
+				EDC632762C18E5DD00316639 /* UIViewController+Extension.swift in Sources */,
+				EDC632812C18E5DD00316639 /* CircleImageView.swift in Sources */,
+				EDC6327D2C18E5DD00316639 /* SeparatorView.swift in Sources */,
+				EDC631FE2C183E3D00316639 /* AppDelegate.swift in Sources */,
+				EDC6328B2C18F62500316639 /* UISheetPresentationController+Detent.swift in Sources */,
+				EDC632002C183E3D00316639 /* SceneDelegate.swift in Sources */,
+				EDC632872C18EE6D00316639 /* BottomSheetViewController+DataSource.swift in Sources */,
+				EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */,
+				EDC632192C186FA800316639 /* CountryModel.swift in Sources */,
+				EDC6327E2C18E5DD00316639 /* HeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDC632082C183E3F00316639 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDC632092C183E3F00316639 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDC6320C2C183E3F00316639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDC6320D2C183E3F00316639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDC6320F2C183E3F00316639 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HDPNMRTNJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fyno-task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fyno-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDC632102C183E3F00316639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HDPNMRTNJ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fyno-task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fyno-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDC631F52C183E3D00316639 /* Build configuration list for PBXProject "Fyno-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC6320C2C183E3F00316639 /* Debug */,
+				EDC6320D2C183E3F00316639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDC6320E2C183E3F00316639 /* Build configuration list for PBXNativeTarget "Fyno-task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC6320F2C183E3F00316639 /* Debug */,
+				EDC632102C183E3F00316639 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDC631F22C183E3D00316639 /* Project object */;
+}
