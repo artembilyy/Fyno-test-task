@@ -33,6 +33,18 @@ final class BottomSheetViewController: UIViewController {
     private let statisticsSectionView = StatisticsSectionView()
     private let separatorView = SeparatorView()
     
+    var viewModel: MainFeatureViewModel!
+    
+    init(viewModel: MainFeatureViewModel!) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private let backgroundView: UIView = {
         $0.backgroundColor = .white
         $0.layer.cornerRadius = Style.Constant.backgroundViewCornerRadius
@@ -53,7 +65,7 @@ final class BottomSheetViewController: UIViewController {
         collectionView.backgroundColor = .white
         return collectionView
     }()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,11 +78,17 @@ final class BottomSheetViewController: UIViewController {
         }
         
         setupLayout()
+        updateUI()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         removeBackgroundForParents()
+    }
+    
+    private func updateUI() {
+        statisticsSectionView.countriesValueText = String(viewModel.visitedCountries.count)
+        statisticsSectionView.worldValueText = String(viewModel.percentageOfWorldDiscovery) + " %"
     }
     
     private func setupLayout() {

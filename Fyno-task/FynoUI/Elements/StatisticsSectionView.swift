@@ -14,12 +14,15 @@ final class StatisticsSectionView: UIStackView {
         }
 
         enum Text {
-            static let countriesValue = "5"
+            static let countriesValue = "0"
             static let countriesTitle = "countries"
-            static let worldValue = "2%"
+            static let worldValue = "0%"
             static let worldTitle = "world"
         }
     }
+    
+    private let countriesView = StatisticView()
+    private let worldView = StatisticView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,10 +33,20 @@ final class StatisticsSectionView: UIStackView {
     required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    var countriesValueText = Style.Text.countriesValue {
+        didSet {
+            countriesView.valueText = countriesValueText
+        }
+    }
+    
+    var worldValueText = Style.Text.worldValue {
+        didSet {
+            worldView.valueText = worldValueText
+        }
+    }
 
     private func setupUI() {
-        let countriesView = StatisticView()
-        let worldView = StatisticView()
         let divider = VerticalDividerView()
 
         countriesView.valueText = Style.Text.countriesValue

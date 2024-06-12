@@ -12,30 +12,34 @@ final class MainFeatureViewController: UIViewController {
     
     private enum MapConstants {
         static let standardMapHeight: CGFloat = 450
-        static let standardCameraDistance: CGFloat = 24 * 1000 * 1000
+        static let standardCameraDistance: CGFloat = 24 * 1000 * 1350
     }
     
-    private lazy var mapView = MKMapView(frame: view.bounds)
-    let bottomSheet = BottomSheetViewController()
+    private lazy var mapView = MKMapView()
+    private lazy var bottomSheet = BottomSheetViewController(viewModel: viewModel)
+    
+    var viewModel: MainFeatureViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI: do {
             view.backgroundColor = .black
-            setupMapView()
             setupBottomSheet()
-            focusOnPointAndShowGlobe()
         }
     }
-        
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         present(bottomSheet, animated: true, completion: nil)
+        setupMapView()
+        focusOnPointAndShowGlobe()
     }
     
     private func setupMapView() {
+        mapView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.width)
         mapView.preferredConfiguration = MKHybridMapConfiguration(elevationStyle: .realistic)
-        mapView.addAnnotations(Country.mockData)
+        let countries = viewModel.wishlistCountries + viewModel.visitedCountries
+        mapView.addAnnotations(countries)
         mapView.delegate = self
         mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: CustomAnnotationView.identifier)
         view.addSubview(mapView)
@@ -47,8 +51,8 @@ final class MainFeatureViewController: UIViewController {
 
         if let sheet = bottomSheet.sheetPresentationController {
             sheet.detents = [
-                .small(),
                 .medium(),
+                .large()
             ]
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             sheet.largestUndimmedDetentIdentifier = .medium
@@ -58,7 +62,7 @@ final class MainFeatureViewController: UIViewController {
     private func focusOnPointAndShowGlobe() {
         let mapHeight = mapView.bounds.height
         let targetDistance = (mapHeight / MapConstants.standardMapHeight) * MapConstants.standardCameraDistance
-        let originalCenter = Country.mockData.first!.coordinate
+        let originalCenter = viewModel.visitedCountries.first!.coordinate
 
         let latitudeOffset = 20.0
         let newLatitude = originalCenter.latitude - latitudeOffset

@@ -18,12 +18,4 @@ extension MainFeatureViewController: MKMapViewDelegate {
         annotationView.hasVisited = countryAnnotation.hasVisited
         return annotationView
     }
-
-    func mapView(_: MKMapView, regionWillChangeAnimated _: Bool) {
-        if let sheet = bottomSheet.sheetPresentationController {
-            sheet.animateChanges {
-                sheet.selectedDetentIdentifier = .small
-            }
-        }
-    }
 }

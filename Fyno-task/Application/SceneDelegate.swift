@@ -13,8 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        let viewController = MainFeatureViewController()
+        let viewModel = MainFeatureViewModel()
+        viewController.viewModel = viewModel
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = MainFeatureViewController()
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
 

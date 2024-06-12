@@ -30,8 +30,8 @@
 		EDC632852C18E6B700316639 /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632842C18E6B700316639 /* UICollectionView+Register.swift */; };
 		EDC632872C18EE6D00316639 /* BottomSheetViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632862C18EE6D00316639 /* BottomSheetViewController+DataSource.swift */; };
 		EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */; };
-		EDC6328B2C18F62500316639 /* UISheetPresentationController+Detent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */; };
 		EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */; };
+		EDC632D32C1A54D300316639 /* MainFeatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +60,8 @@
 		EDC632842C18E6B700316639 /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
 		EDC632862C18EE6D00316639 /* BottomSheetViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+DataSource.swift"; sourceTree = "<group>"; };
 		EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+FlowLayout.swift"; sourceTree = "<group>"; };
-		EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISheetPresentationController+Detent.swift"; sourceTree = "<group>"; };
 		EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainFeatureViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+		EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +107,7 @@
 		EDC632122C186F2300316639 /* MainFeature */ = {
 			isa = PBXGroup;
 			children = (
+				EDC632D12C1A54B700316639 /* ViewModel */,
 				EDC632172C186F9E00316639 /* Model */,
 				EDC632132C186F3400316639 /* View */,
 			);
@@ -140,7 +141,6 @@
 				EDC632752C18E5DD00316639 /* UIStackView+Extension.swift */,
 				EDC632682C18E5DD00316639 /* UIViewController+Extension.swift */,
 				EDC632842C18E6B700316639 /* UICollectionView+Register.swift */,
-				EDC6328A2C18F62500316639 /* UISheetPresentationController+Detent.swift */,
 			);
 			path = FynoUI;
 			sourceTree = "<group>";
@@ -170,6 +170,14 @@
 				EDC631FF2C183E3D00316639 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		EDC632D12C1A54B700316639 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC632802C18E5DD00316639 /* CountryCell.swift in Sources */,
+				EDC632D32C1A54D300316639 /* MainFeatureViewModel.swift in Sources */,
 				EDC6327A2C18E5DD00316639 /* TopSectionView.swift in Sources */,
 				EDC6327B2C18E5DD00316639 /* FooterView.swift in Sources */,
 				EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */,
@@ -263,7 +272,6 @@
 				EDC632812C18E5DD00316639 /* CircleImageView.swift in Sources */,
 				EDC6327D2C18E5DD00316639 /* SeparatorView.swift in Sources */,
 				EDC631FE2C183E3D00316639 /* AppDelegate.swift in Sources */,
-				EDC6328B2C18F62500316639 /* UISheetPresentationController+Detent.swift in Sources */,
 				EDC632002C183E3D00316639 /* SceneDelegate.swift in Sources */,
 				EDC632872C18EE6D00316639 /* BottomSheetViewController+DataSource.swift in Sources */,
 				EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */,

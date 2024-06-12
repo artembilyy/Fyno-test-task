@@ -28,13 +28,4 @@ final class Country: NSObject, MKAnnotation {
             longitude: CLLocationDegrees(floatLiteral: longitude)
         )
     }
-
-    static var mockData = [
-        Country(title: "Peru", flag: "🇵🇪", latitude: -12.046374, longitude: -77.042793, hasVisited: false),
-        Country(title: "Ukraine", flag: "🇺🇦", latitude: 49.9935, longitude: 36.2304, hasVisited: true),
-        Country(title: "Mexico", flag: "🇲🇽", latitude: 23.6345, longitude: -102.5528, hasVisited: true),
-        Country(title: "Chile", flag: "🇨🇱", latitude: -31.7613, longitude: -71.3188, hasVisited: true),
-        Country(title: "Italy", flag: "🇮🇹", latitude: 41.902783, longitude: 12.496366, hasVisited: false),
-        Country(title: "United States of America", flag: "🇺🇸", latitude: 39.8333, longitude: -98.5855, hasVisited: false),
-    ]
 }

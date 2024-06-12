@@ -15,9 +15,9 @@ extension BottomSheetViewController: UICollectionViewDataSource {
     func collectionView(_: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            Country.mockData.filter(\.hasVisited).count
+            viewModel.visitedCountries.count
         case 1:
-            Country.mockData.filter { !$0.hasVisited }.count
+            viewModel.wishlistCountries.count
         default:
             0
         }
@@ -27,10 +27,10 @@ extension BottomSheetViewController: UICollectionViewDataSource {
         let cell: CountryCell = collectionView.dequeueReusableCell(for: indexPath)
         switch indexPath.section {
         case 0:
-            let visitedCountries = Country.mockData.filter(\.hasVisited)
+            let visitedCountries = viewModel.visitedCountries
             cell.configure(with: visitedCountries[indexPath.item])
         case 1:
-            let notVisitedCountries = Country.mockData.filter { !$0.hasVisited }
+            let notVisitedCountries = viewModel.wishlistCountries
             cell.configure(with: notVisitedCountries[indexPath.item])
         default:
             return UICollectionViewCell()
@@ -67,9 +67,9 @@ extension BottomSheetViewController: UICollectionViewDataSource {
         footer.isLast = (indexPath.section == collectionView.numberOfSections - 1)
         switch indexPath.section {
         case 0:
-            footer.remaining = 2
+            footer.remaining = viewModel.seeMoreVisitedCount
         case 1:
-            footer.remaining = 5
+            footer.remaining = viewModel.seeMoreWishlistCount
         default:
             break
         }

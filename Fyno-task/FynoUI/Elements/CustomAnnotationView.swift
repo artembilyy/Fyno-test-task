@@ -28,7 +28,7 @@ final class CustomAnnotationView: MKAnnotationView {
 
         enum Image {
             static let imageView = UIImage(resource: .pin)
-            static let checkmark = UIImage(resource: .customcheckmark)
+            static let checkmark = UIImage(resource: .checkcirclemark)
         }
     }
 
