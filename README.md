@@ -11,3 +11,6 @@
 
 ### Requirements
 Develop a single screen based on the design from Figma file. It does not have a detailed specification, and that's by design — please add as much functionality as you think is required to WOW every traveler who ends up on this screen (e.g., empty states).
+
+### Demo
+[Watch demo on YT](https://www.youtube.com/shorts/Xkdppo-GYVk)
