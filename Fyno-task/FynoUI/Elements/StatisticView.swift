@@ -29,7 +29,7 @@ final class StatisticView: UIStackView {
     }(UILabel())
 
     private let titleLabel: UILabel = {
-        $0.textColor = .lightGray
+        $0.textColor = .gray
         $0.textAlignment = .center
         $0.font = UIFont.systemFont(
             ofSize: Style.Constant.titleLabelFontSize,

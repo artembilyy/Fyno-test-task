@@ -8,7 +8,6 @@
 import MapKit
 
 final class CustomAnnotationView: MKAnnotationView {
-    
     static let identifier = String(describing: CustomAnnotationView.self)
 
     private enum Style {
@@ -28,7 +27,7 @@ final class CustomAnnotationView: MKAnnotationView {
 
         enum Image {
             static let imageView = UIImage(resource: .pin)
-            static let checkmark = UIImage(resource: .checkcirclemark)
+            static let checkmark = UIImage(resource: .circle)
         }
     }
 
@@ -83,8 +82,7 @@ final class CustomAnnotationView: MKAnnotationView {
         containerView.layer.shadowOpacity = Style.Constant.shadowOpacity
         containerView.layer.shadowOffset = CGSize(
             width: Style.Constant.shadowOffsetWidth,
-            height: Style.Constant.shadowOffsetHeight
-        )
+            height: Style.Constant.shadowOffsetHeight)
         containerView.layer.shadowRadius = Style.Constant.shadowRadius
         containerView.layer.masksToBounds = false
     }
@@ -126,7 +124,7 @@ final class CustomAnnotationView: MKAnnotationView {
             imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             imageView.topAnchor.constraint(equalTo: containerView.topAnchor),
             imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ]
 
         flagLabel.translatesAutoresizingMaskIntoConstraints = false

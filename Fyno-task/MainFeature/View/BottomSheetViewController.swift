@@ -8,7 +8,12 @@
 import UIKit
 
 final class BottomSheetViewController: UIViewController {
-    
+
+    enum Section: Int, CaseIterable {
+        case visited
+        case bucketlist
+    }
+
     enum Style {
         enum Constant {
             static let backgroundViewCornerRadius: CGFloat = 16
@@ -20,38 +25,38 @@ final class BottomSheetViewController: UIViewController {
             static let statisticsSectionViewTopPadding: CGFloat = 21
             static let separatorViewTopPadding: CGFloat = 5
         }
-        
+
         enum CollectionViewLayout {
             static let itemHeight: CGFloat = 48
             static let headerHeight: CGFloat = 48
             static let footerHeight: CGFloat = 65
         }
     }
-    
+
     private let imageView = CircleImageView()
     private let topSectionView = TopSectionView()
     private let statisticsSectionView = StatisticsSectionView()
     private let separatorView = SeparatorView()
-    
-    var viewModel: MainFeatureViewModel!
-    
-    init(viewModel: MainFeatureViewModel!) {
+
+    let viewModel: MainFeatureViewModel
+
+    init(viewModel: MainFeatureViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private let backgroundView: UIView = {
         $0.backgroundColor = .white
         $0.layer.cornerRadius = Style.Constant.backgroundViewCornerRadius
         return $0
     }(UIView())
-    
-    private lazy var collectionView: UICollectionView = {
+
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionHeadersPinToVisibleBounds = true
@@ -65,79 +70,78 @@ final class BottomSheetViewController: UIViewController {
         collectionView.backgroundColor = .white
         return collectionView
     }()
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI: do {
             let subviews = [backgroundView, imageView, topSectionView, statisticsSectionView, collectionView, separatorView]
-            subviews.forEach { view in
+            for view in subviews {
                 view.translatesAutoresizingMaskIntoConstraints = false
                 self.view.addSubview(view)
             }
         }
-        
+
         setupLayout()
         updateUI()
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         removeBackgroundForParents()
     }
-    
+
     private func updateUI() {
         statisticsSectionView.countriesValueText = String(viewModel.visitedCountries.count)
-        statisticsSectionView.worldValueText = String(viewModel.percentageOfWorldDiscovery) + " %"
+        statisticsSectionView.worldValueText = String(viewModel.percentageOfWorldDiscovery) + "%"
     }
-    
+
     private func setupLayout() {
-        
         let backgroundViewConstraints = [
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor, constant: Style.Constant.backgroundViewTopPadding),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ]
 
         let topSectionViewConstraints = [
             topSectionView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: Style.Constant.topSectionViewTopPadding),
             topSectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: Style.Constant.topSectionViewTrailingPadding),
-            topSectionView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: Style.Constant.imageViewLeadingPadding)
+            topSectionView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: Style.Constant.imageViewLeadingPadding),
         ]
 
         let imageViewConstraints = [
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Style.Constant.imageViewLeadingPadding),
             imageView.widthAnchor.constraint(equalToConstant: Style.Constant.imageViewWidth),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor)
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
         ]
 
         let statisticsSectionViewConstraints = [
             statisticsSectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            statisticsSectionView.topAnchor.constraint(equalTo: topSectionView.bottomAnchor, constant: Style.Constant.statisticsSectionViewTopPadding)
+            statisticsSectionView.topAnchor.constraint(equalTo: topSectionView.bottomAnchor, constant: Style.Constant.statisticsSectionViewTopPadding),
         ]
 
         let separatorViewConstraints = [
             separatorView.topAnchor.constraint(equalTo: statisticsSectionView.bottomAnchor, constant: Style.Constant.separatorViewTopPadding),
             separatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            separatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            separatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ]
 
         let collectionViewConstraints = [
             collectionView.topAnchor.constraint(equalTo: separatorView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ]
 
         NSLayoutConstraint.activate(
             backgroundViewConstraints
-            + topSectionViewConstraints
-            + imageViewConstraints
-            + statisticsSectionViewConstraints
-            + separatorViewConstraints
-            + collectionViewConstraints
+                + topSectionViewConstraints
+                + imageViewConstraints
+                + statisticsSectionViewConstraints
+                + separatorViewConstraints
+                + collectionViewConstraints
         )
     }
 }

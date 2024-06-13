@@ -20,7 +20,7 @@ final class StatisticsSectionView: UIStackView {
             static let worldTitle = "world"
         }
     }
-    
+
     private let countriesView = StatisticView()
     private let worldView = StatisticView()
 
@@ -33,13 +33,13 @@ final class StatisticsSectionView: UIStackView {
     required init(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     var countriesValueText = Style.Text.countriesValue {
         didSet {
             countriesView.valueText = countriesValueText
         }
     }
-    
+
     var worldValueText = Style.Text.worldValue {
         didSet {
             worldView.valueText = worldValueText

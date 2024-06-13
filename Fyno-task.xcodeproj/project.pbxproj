@@ -32,6 +32,9 @@
 		EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */; };
 		EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */; };
 		EDC632D32C1A54D300316639 /* MainFeatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */; };
+		EDC632DB2C1AE90400316639 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632DA2C1AE90400316639 /* CustomBackButton.swift */; };
+		EDC632E02C1B023000316639 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632DF2C1B023000316639 /* GreetingViewController.swift */; };
+		EDC632E42C1B9D2900316639 /* BottomSheetViewController+FooterViewInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC632E32C1B9D2900316639 /* BottomSheetViewController+FooterViewInteraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+FlowLayout.swift"; sourceTree = "<group>"; };
 		EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainFeatureViewController+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureViewModel.swift; sourceTree = "<group>"; };
+		EDC632DA2C1AE90400316639 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		EDC632DF2C1B023000316639 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		EDC632E32C1B9D2900316639 /* BottomSheetViewController+FooterViewInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheetViewController+FooterViewInteraction.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		EDC631FC2C183E3D00316639 /* Fyno-task */ = {
 			isa = PBXGroup;
 			children = (
+				EDC632E22C1B9CA200316639 /* GreetingScreen */,
 				EDC632832C18E61500316639 /* Application */,
 				EDC632672C18E5DD00316639 /* FynoUI */,
 				EDC632122C186F2300316639 /* MainFeature */,
@@ -122,6 +129,7 @@
 				EDC632882C18F26900316639 /* BottomSheetViewController+FlowLayout.swift */,
 				EDC632012C183E3D00316639 /* MainFeatureViewController.swift */,
 				EDC6328C2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift */,
+				EDC632E32C1B9D2900316639 /* BottomSheetViewController+FooterViewInteraction.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 				EDC6326A2C18E5DD00316639 /* StatisticView.swift */,
 				EDC6326D2C18E5DD00316639 /* TopSectionView.swift */,
 				EDC6326B2C18E5DD00316639 /* VerticalDividerView.swift */,
+				EDC632DA2C1AE90400316639 /* CustomBackButton.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -178,6 +187,14 @@
 				EDC632D22C1A54D300316639 /* MainFeatureViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EDC632E22C1B9CA200316639 /* GreetingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EDC632DF2C1B023000316639 /* GreetingViewController.swift */,
+			);
+			path = GreetingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +277,7 @@
 				EDC6327B2C18E5DD00316639 /* FooterView.swift in Sources */,
 				EDC6328D2C18F65000316639 /* MainFeatureViewController+MKMapViewDelegate.swift in Sources */,
 				EDC6327C2C18E5DD00316639 /* CustomAnnotationView.swift in Sources */,
+				EDC632DB2C1AE90400316639 /* CustomBackButton.swift in Sources */,
 				EDC632022C183E3D00316639 /* MainFeatureViewController.swift in Sources */,
 				EDC632792C18E5DD00316639 /* StatisticsSectionView.swift in Sources */,
 				EDC6327F2C18E5DD00316639 /* AddButton.swift in Sources */,
@@ -269,9 +287,11 @@
 				EDC632782C18E5DD00316639 /* VerticalDividerView.swift in Sources */,
 				EDC6321B2C18C12100316639 /* BottomSheetViewController.swift in Sources */,
 				EDC632762C18E5DD00316639 /* UIViewController+Extension.swift in Sources */,
+				EDC632E02C1B023000316639 /* GreetingViewController.swift in Sources */,
 				EDC632812C18E5DD00316639 /* CircleImageView.swift in Sources */,
 				EDC6327D2C18E5DD00316639 /* SeparatorView.swift in Sources */,
 				EDC631FE2C183E3D00316639 /* AppDelegate.swift in Sources */,
+				EDC632E42C1B9D2900316639 /* BottomSheetViewController+FooterViewInteraction.swift in Sources */,
 				EDC632002C183E3D00316639 /* SceneDelegate.swift in Sources */,
 				EDC632872C18EE6D00316639 /* BottomSheetViewController+DataSource.swift in Sources */,
 				EDC632892C18F26900316639 /* BottomSheetViewController+FlowLayout.swift in Sources */,

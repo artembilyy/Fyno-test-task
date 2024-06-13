@@ -56,7 +56,7 @@ final class TopSectionView: UIView {
 
     private let descriptionLabel: UILabel = {
         $0.text = Style.Text.descriptionLabel
-        $0.textColor = .lightGray
+        $0.textColor = .gray
         $0.numberOfLines = 0
         $0.textAlignment = .left
         $0.font = UIFont.systemFont(

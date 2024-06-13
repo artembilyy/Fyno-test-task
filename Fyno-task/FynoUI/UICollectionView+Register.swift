@@ -14,7 +14,6 @@ extension UICollectionViewCell {
 }
 
 extension UICollectionView {
-
     func registerCell<T: UICollectionViewCell>(_: T.Type, identifier: String? = nil) {
         let identifier = identifier ?? T.identifier
         register(T.self, forCellWithReuseIdentifier: identifier)
@@ -26,7 +25,7 @@ extension UICollectionView {
         }
         return cell
     }
-    
+
     func registerFooter<T: UICollectionReusableView>(_: T.Type, identifier: String? = nil) {
         let identifier = identifier ?? String(describing: T.self)
         register(T.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: identifier)

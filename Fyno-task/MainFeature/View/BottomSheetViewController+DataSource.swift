@@ -9,31 +9,29 @@ import UIKit
 
 extension BottomSheetViewController: UICollectionViewDataSource {
     func numberOfSections(in _: UICollectionView) -> Int {
-        2
+        Section.allCases.count
     }
 
     func collectionView(_: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let section = Section(rawValue: section) else { return 0 }
         switch section {
-        case 0:
-            viewModel.visitedCountries.count
-        case 1:
-            viewModel.wishlistCountries.count
-        default:
-            0
+        case .visited:
+            return viewModel.dataSourceVisitedCountiesCount
+        case .bucketlist:
+            return viewModel.dataSourceWishlistCountiesCount
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let section = Section(rawValue: indexPath.section) else { return UICollectionViewCell() }
         let cell: CountryCell = collectionView.dequeueReusableCell(for: indexPath)
-        switch indexPath.section {
-        case 0:
+        switch section {
+        case .visited:
             let visitedCountries = viewModel.visitedCountries
             cell.configure(with: visitedCountries[indexPath.item])
-        case 1:
-            let notVisitedCountries = viewModel.wishlistCountries
+        case .bucketlist:
+            let notVisitedCountries = viewModel.bucketlistCountries
             cell.configure(with: notVisitedCountries[indexPath.item])
-        default:
-            return UICollectionViewCell()
         }
         return cell
     }
@@ -50,14 +48,13 @@ extension BottomSheetViewController: UICollectionViewDataSource {
     }
 
     private func headerView(for indexPath: IndexPath, in collectionView: UICollectionView) -> UICollectionReusableView {
+        guard let section = Section(rawValue: indexPath.section) else { return UICollectionReusableView() }
         let header: HeaderView = collectionView.dequeueHeader(for: indexPath)
-        switch indexPath.section {
-        case 0:
+        switch section {
+        case .visited:
             header.title = "I’ve been to"
-        case 1:
+        case .bucketlist:
             header.title = "My bucket list"
-        default:
-            break
         }
         return header
     }
@@ -65,11 +62,15 @@ extension BottomSheetViewController: UICollectionViewDataSource {
     private func footerView(for indexPath: IndexPath, in collectionView: UICollectionView) -> UICollectionReusableView {
         let footer: FooterView = collectionView.dequeueFooter(for: indexPath)
         footer.isLast = (indexPath.section == collectionView.numberOfSections - 1)
+        footer.footerTopSection.delegate = self
+        footer.footerTopSection.tag = indexPath.section
         switch indexPath.section {
         case 0:
-            footer.remaining = viewModel.seeMoreVisitedCount
+            footer.remainingCount = viewModel.seeMoreVisitedCount
+            footer.showSeparatorOnly = viewModel.seeMoreVisitedListIsHidden
         case 1:
-            footer.remaining = viewModel.seeMoreWishlistCount
+            footer.remainingCount = viewModel.seeMoreWishlistCount
+            footer.showSeparatorOnly = viewModel.seeMoreBucketlistIsHidden
         default:
             break
         }

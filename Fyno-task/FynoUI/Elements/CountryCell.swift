@@ -8,7 +8,6 @@
 import UIKit
 
 final class CountryCell: UICollectionViewCell {
-
     private enum Style {
         enum Constant {
             static let flagLabelLeadingPadding: CGFloat = 24.0

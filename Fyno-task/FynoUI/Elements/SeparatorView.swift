@@ -42,18 +42,12 @@ final class SeparatorView: UIView {
     }
 
     private func setupConstraints() {
-        let constraint = {
-            let constraint = separatorView.heightAnchor.constraint(equalToConstant: Style.Constant.separatorHeight)
-            constraint.priority = .defaultLow
-            return constraint
-        }()
-        
         NSLayoutConstraint.activate([
-            constraint,
-            separatorView.topAnchor.constraint(equalTo: topAnchor, constant: Style.Constant.topPadding),
+            heightAnchor.constraint(equalToConstant: 16),
+            separatorView.heightAnchor.constraint(equalToConstant: Style.Constant.separatorHeight),
+            separatorView.centerYAnchor.constraint(equalTo: centerYAnchor),
             separatorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Style.Constant.leadingPadding),
             separatorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Style.Constant.trailingPadding),
-            separatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Style.Constant.bottomPadding),
         ])
     }
 }

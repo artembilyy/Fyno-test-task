@@ -26,7 +26,8 @@ final class AddButton: UIControl {
         enum Color {
             static let nameLabelColor = UIColor.systemIndigo
             static let backgroundViewColor = UIColor(
-                red: 242/255, green: 242/255, blue: 242/247, alpha: 1)
+                red: 242 / 255, green: 242 / 255, blue: 242 / 247, alpha: 1
+            )
         }
     }
 

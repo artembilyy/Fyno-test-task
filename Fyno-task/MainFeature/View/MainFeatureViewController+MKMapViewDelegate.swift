@@ -14,8 +14,22 @@ extension MainFeatureViewController: MKMapViewDelegate {
         else {
             return nil
         }
+        annotationView.frame.size.height = 40
+        annotationView.frame.size.width = 40
         annotationView.flag = countryAnnotation.flag
         annotationView.hasVisited = countryAnnotation.hasVisited
         return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        let coordinate = annotation.coordinate
+
+        let region = MKCoordinateRegion(
+            center: coordinate,
+            latitudinalMeters: 1_000_000,
+            longitudinalMeters: 100_000
+        )
+
+        mapView.setRegion(region, animated: true)
     }
 }
